@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emotion Detection</title>
+  <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/emotion_detection.css') }}">
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+    <label for="userInput">Enter sentence:</label>
+    <input type="text" id="userInput" maxlength="150">
+    <button type="button" onclick="analyzeEmotion()">Analyze</button>
+    <p id="result">Output will appear here...</p>
+  </body>
+  
+  <script>
+  async function analyzeEmotion() {
+      const text = document.getElementById("userInput").value;
+  
+      const response = await fetch("/detect_emotion", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text })
+      });
+  
+      const data = await response.json();
+      document.getElementById("result").innerText =
+          "Dominant Emotion: " + data.dominant_emotion;
+  }
+  </script>
+  
