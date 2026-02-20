@@ -1,0 +1,94 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap');
+
+/* Page styling */
+.page {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+/* Title styling */
+.title {
+  font-family: 'Nunito', sans-serif;
+  color: #ac96b8;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Two-column layout */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Containers */
+.left, .right, .result, .chart {
+  border: 1px solid #ff914d;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 10px;
+  color: #ac96b8;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Left container */
+.left {
+  flex: 1;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+/* Right container split vertically */
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Result section */
+.result {
+  flex: 1;
+  background-color: #e9f5ff;
+  text-align: left;
+}
+
+/* Chart section */
+.chart {
+  flex: 1;
+  background-color: #fff3e6;
+  text-align: left;
+}
+
+/* Input field styling */
+.left input {
+  border: 1px solid #ff914d;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  color: #ac96b8;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Input focus */
+.left input:focus {
+  outline: none;
+  border: 2px solid #ac96b8;
+}
+
+/* Submit button */
+.left button {
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.left button:hover {
+  background-color: #ac96b8;
+  color: white;
+}
