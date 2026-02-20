@@ -1,0 +1,6 @@
+from your_package import app
+from flask import render_template
+
+@app.route('/')
+def home():
+    return render_template('emotion.html')
